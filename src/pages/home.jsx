@@ -8,10 +8,10 @@ import LP from "../components/LP";
 const Home = function () {
   return (
     <div>
-      <header>
+      <header className="w-screen">
         <Header />
       </header>
-      <main>
+      <main className="w-screen h-[90vh]">
         <LP />
       </main>
       <section>
