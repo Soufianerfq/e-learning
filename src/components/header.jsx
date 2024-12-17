@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Header = function () {
   return (
@@ -15,9 +16,11 @@ const Header = function () {
         />
       </div>
       <div id="navLinks " className="flex space-x-5">
-        <h1 className=" rounded-full shadow-[0px_0px_10px_0px_rgba(0,_0,_0,_0.2)] pr-4 pl-4 pt-1 pb-1">
-          Courses
-        </h1>
+        <Link to="/courses">
+          <h1 className=" rounded-full shadow-[0px_0px_10px_0px_rgba(0,_0,_0,_0.2)] pr-4 pl-4 pt-1 pb-1">
+            Courses
+          </h1>
+        </Link>
         <h1 className=" rounded-full shadow-[0px_0px_10px_0px_rgba(0,_0,_0,_0.2)] pr-4 pl-4 pt-1 pb-1 ">
           Pricing
         </h1>

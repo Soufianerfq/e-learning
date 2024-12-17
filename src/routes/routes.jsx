@@ -8,8 +8,10 @@ const Routers = function () {
   return (
     <Routes>
       <Route index element={<Home />} />
-      <Route path="course/:Title" element={<CoursePage />} />
-      <Route path="library" element={<Library />} />
+      <Route path="courses/:Title" element={<CoursePage />}>
+        <Route path=":Part" element={<CoursePage />} />
+      </Route>
+      <Route path="courses" element={<Library />} />
     </Routes>
   );
 };

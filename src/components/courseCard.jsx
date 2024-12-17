@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const CourseCard = function (props) {
   return (
-    <Link to={`/course/${props.Title}`}>
+    <Link to={`courses/${props.Title}`}>
       <div className="w-full h-full flex flex-col p-3 space-y-3">
         <div id="thumbnail" className="w-[100%] h-[40%]">
           <div className="rounded-lg w-[100%] h-[100%] shadow-[0px_0px_10px_0px_rgba(0,_0,_0,_0.1)]"></div>

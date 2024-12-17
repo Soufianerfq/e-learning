@@ -7,20 +7,22 @@ import { useParams } from "react-router-dom";
 import courses from "../data/data";
 
 const CoursePage = function () {
-  const { Title } = useParams();
+  const { Title, Part } = useParams();
 
   const course = courses.find((obj) => obj.Title === Title);
-  const videos = course.Parts[0].lessons;
+  let videos = "";
+  if (Part !== undefined) {
+    videos = course.Parts.find((obj) => obj.Title === Part).lessons;
+  } else {
+    videos = course.Parts[0].lessons;
+  }
 
   return (
     <>
       <header className="w-screen h-[10vh] pt-[20px]">
         <Header />
       </header>
-      <section
-        id="video&resources"
-        className="flex h-[50vh] w-screen shadow-[0px_0px_10px_0px_rgba(0,_0,_0,_0.1)] m-2"
-      >
+      <section id="video&resources" className="flex h-[50vh] w-screen  m-2">
         <div
           id="videoPlayer"
           className="h-full w-[80%] shadow-[0px_0px_10px_0px_rgba(0,_0,_0,_0.1)] m-2"
@@ -46,7 +48,6 @@ const CoursePage = function () {
       <footer className="w-screen h-[30vh]">
         <Footer />
       </footer>
-      {console.log(videos)}
     </>
   );
 };
