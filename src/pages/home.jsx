@@ -7,23 +7,23 @@ import LP from "../components/LP";
 
 const Home = function () {
   return (
-    <div>
-      <header className="w-screen">
+    <>
+      <header className="w-screen h-[10vh] pt-[20px]">
         <Header />
       </header>
-      <main className="w-screen h-[90vh]">
+      <main className="w-screen h-[100vh]">
         <LP />
       </main>
-      <section>
+      <section className="w-screen h-[100vh]">
         <TopRate />
       </section>
-      <section>
+      <section className="w-screen h-[100vh]">
         <PricingPannelSection />
       </section>
-      <footer>
+      <footer className="w-screen h-[30vh]">
         <Footer />
       </footer>
-    </div>
+    </>
   );
 };
 export default Home;
