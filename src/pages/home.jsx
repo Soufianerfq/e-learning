@@ -4,12 +4,11 @@ import Header from "../components/header";
 import PricingPannelSection from "../components/pricingPannelSection";
 import Footer from "../components/footer";
 import LP from "../components/LP";
-import CourseCard from "../components/courseCard";
 
 const Home = function () {
   return (
-    <div>
-      <header className="w-screen h-[10vh] pt-[25px]">
+    <>
+      <header className="w-screen h-[10vh] pt-[20px]">
         <Header />
       </header>
       <main className="w-screen h-[100vh]">
@@ -24,7 +23,7 @@ const Home = function () {
       <footer className="w-screen h-[30vh]">
         <Footer />
       </footer>
-    </div>
+    </>
   );
 };
 export default Home;

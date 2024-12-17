@@ -6,8 +6,8 @@ const LP = function () {
       <div className="w-screen h-[66%]">
         <div className=" w-[100%] flex">
           <div className="absolute left-[70%] top-[12%]">
-            <h1 className=" font-semibold"> I AM A HEADLINE </h1>
-            <p className=" text-[#cccccc]">
+            <h1 className=" font-semibold font-serif"> I AM A HEADLINE </h1>
+            <p className=" font-serif text-[#cccccc]">
               Lorem ipsum dolor sit amet consectetur adipiscing elit tempus
               quisque metus, torquent himenaeos massa iaculis potenti dictum dui
               cum integer arcu urna

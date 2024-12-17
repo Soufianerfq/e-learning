@@ -8,7 +8,7 @@ const Routers = function () {
   return (
     <Routes>
       <Route index element={<Home />} />
-      <Route path="course/:id" element={<CoursePage />} />
+      <Route path="course/:Title" element={<CoursePage />} />
       <Route path="library" element={<Library />} />
     </Routes>
   );
