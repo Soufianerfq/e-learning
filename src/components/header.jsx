@@ -17,16 +17,10 @@ const Header = function () {
       </div>
       <div id="navLinks " className="flex space-x-5">
         <Link to="/courses">
-          <h1 className=" rounded-full shadow-[0px_0px_10px_0px_rgba(0,_0,_0,_0.2)] pr-4 pl-4 pt-1 pb-1">
-            Courses
-          </h1>
+          <h1 className="pr-4 pl-4 pt-1 pb-1">Courses</h1>
         </Link>
-        <h1 className=" rounded-full shadow-[0px_0px_10px_0px_rgba(0,_0,_0,_0.2)] pr-4 pl-4 pt-1 pb-1 ">
-          Pricing
-        </h1>
-        <h1 className=" rounded-full shadow-[0px_0px_10px_0px_rgba(0,_0,_0,_0.2)] pr-4 pl-4 pt-1 pb-1">
-          Contact
-        </h1>
+        <h1 className="  pr-4 pl-4 pt-1 pb-1 ">Pricing</h1>
+        <h1 className=" pr-4 pl-4 pt-1 pb-1">Contact</h1>
       </div>
       <div className="flex space-x-2 ">
         <a className=" bg-[#D89E9E] rounded-full shadow-[0px_0px_10px_0px_rgba(0,_0,_0,_0.2)] pr-4 pl-4 pt-1 pb-1">

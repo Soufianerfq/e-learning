@@ -3,18 +3,32 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 import VideoThumbnail from "../components/coursePageComponents/videoThumbnail";
 import CoursePart from "../components/coursePageComponents/coursepart";
-import { useParams } from "react-router-dom";
+import VideoPlayer from "../components/coursePageComponents/videoPlayer";
+import { useParams, useSearchParams } from "react-router-dom";
+import { useMemo } from "react";
 import courses from "../data/data";
 
 const CoursePage = function () {
-  const { Title, Part } = useParams();
+  const { Title } = useParams();
+  const [searchParams] = useSearchParams();
+  const [LessonsearchParams] = useSearchParams();
 
-  const course = courses.find((obj) => obj.Title === Title);
+  const part = useMemo(
+    () => searchParams.get("part"),
+    [searchParams, searchParams?.get("part")]
+  );
+  const lesson = useMemo(
+    () => LessonsearchParams.get("lesson"),
+    [LessonsearchParams, LessonsearchParams?.get("lesson")]
+  );
+
+  const course = courses.find((obj) => obj.id === Title);
   let videos = "";
-  if (Part !== undefined) {
-    videos = course.Parts.find((obj) => obj.Title === Part).lessons;
-  } else {
+
+  if (part === null) {
     videos = course.Parts[0].lessons;
+  } else {
+    videos = course.Parts.find((obj) => obj.id === part)?.lessons;
   }
 
   return (
@@ -26,7 +40,9 @@ const CoursePage = function () {
         <div
           id="videoPlayer"
           className="h-full w-[80%] shadow-[0px_0px_10px_0px_rgba(0,_0,_0,_0.1)] m-2"
-        ></div>
+        >
+          <VideoPlayer />
+        </div>
         <div
           id="lessonResources"
           className=" overflow-auto h-full w-[20%] shadow-[0px_0px_10px_0px_rgba(0,_0,_0,_0.1)] m-2"

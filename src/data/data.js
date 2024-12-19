@@ -1,13 +1,14 @@
 const courses = [
   {
     Title: "Front End Web Dev",
-    id: 1,
+    id: "front_end",
     Thumbnail: "xxx",
     Parag:
       "Lorem ipsum dolor sit amet consectetur adipiscing elit tempus quisque metus, torquent himenaeos massa iaculis potenti dictum dui cum integer arcu urna",
     Parts: [
       {
         Title: "HTML",
+        id: "html",
         Parag:
           "Lorem ipsum dolor sit amet consectetur adipiscing elit tempus quisque metus, torquent himenaeos massa iaculis potenti dictum dui cum integer arcu urna",
         lessons: [
@@ -57,6 +58,7 @@ const courses = [
       },
       {
         Title: "CSS",
+        id: "css",
         Parag:
           "Lorem ipsum dolor sit amet consectetur adipiscing elit tempus quisque metus, torquent himenaeos massa iaculis potenti dictum dui cum integer arcu urna",
         lessons: [
@@ -104,6 +106,7 @@ const courses = [
       },
       {
         Title: "Java Script",
+        id: "js",
         Parag:
           "Lorem ipsum dolor sit amet consectetur adipiscing elit tempus quisque metus, torquent himenaeos massa iaculis potenti dictum dui cum integer arcu urna",
         lessons: [

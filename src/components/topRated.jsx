@@ -1,6 +1,7 @@
 import React from "react";
 import CourseCard from "./courseCard";
 import courses from "../data/data";
+import { Link } from "react-router-dom";
 
 const TopRate = function () {
   return (
@@ -17,13 +18,13 @@ const TopRate = function () {
         id="courses"
         className="w-[100%] h-[70%] flex justify-center space-x-[5%] "
       >
-        {courses.map((obj) => {
-          return (
+        {courses.map((obj) => (
+          <Link to={`courses/${obj.id}`}>
             <div className="border-solid rounded-lg	shadow-[0px_0px_10px_0px_rgba(0,_0,_0,_0.1)] w-[350px] h-[500px] m-4">
               <CourseCard {...obj} />
             </div>
-          );
-        })}
+          </Link>
+        ))}
       </div>
     </div>
   );
